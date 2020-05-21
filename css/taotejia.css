@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei",Arial;
+    background: rgba(0,0,0,0);
+}
+ul,ol{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    outline: 0;
+}
+img{
+    border: 0;
+}
+#title-wrap {
+    text-align: center;
+    width: 100%;
+    height: .9rem;
+    font-size: .36rem;
+    color: #2b292a;
+    line-height: .9rem;
+    border-bottom: 1px solid #aaa;
+}
+/* 头部 */
+#nav-wrap {
+    width: 100%;
+    height: .7rem;
+    border-bottom: 1px solid #aaa;
+    z-index: 100;
+}
+.nav-content{
+    display: flex;
+    font-size: .5rem;
+    height: .7rem;
+}
+#nav-wrap .item {
+    width: 20%;
+    height: .7rem;
+    vertical-align: top;
+}
+#nav-wrap .item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+#nav-wrap .item.on span {
+    color: #e30c26;
+    border-bottom:.01rem solid #e30c26;
+}
+#nav-wrap .item a span {
+    display: block;
+    height: .7rem;
+    margin: 0 .4rem;
+    border-bottom: .1rem solid #fff;
+    line-height: .7rem;
+    font-size: .3rem;
+    color: #6a6969;
+}
+.top-nav{
+    font-size: .3rem;
+}
+.top-nav div a span{
+    height: .7rem;
+    line-height: .7rem;
+    text-align: center;
+    display: block;
+    color: #6a6969;
+}
+.nav-list{
+    margin-left: .2rem;
+    white-space: nowrap;
+}
+.nav-list li{
+    display: inline-block;
+    margin-right: .4rem;
+}
+.nav-list a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.nav-list a span{
+    text-align: center;
+    display: block;
+    height: .7rem;
+    border-bottom: .05rem solid #fff;
+    line-height: .7rem;
+    font-size: .3rem;
+    color: #6a6969;
+}
+
+/* 中间导航 */
+.mid-list{
+    display: flex;
+}
+.mid-list li{
+    text-align: center;
+    width: 25%;
+}
+.mid-list li img{
+    width: 80%;
+}
+.mid-list li a{
+    display: block;
+    font-size: .2rem;
+    color: #000;
+}
+/* 排行榜 */
+.mid-rank{
+    height: 3rem;
+    font-size: 0;
+    padding-top: 20px;
+}
+.mid-rank img{
+    width: 50%;
+    height: 100%;
+}
+/* 内容 */
+.content ul {
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.content ul li{
+    position: relative;
+    width: 45%;
+}
+.content ul li img{
+    width: 100%;
+}
+.content ul li h3{
+    font-size: .2rem;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #333;
+    font-weight: 100;
+}
+.content ul li p{
+    font-size: .2rem;
+    margin-top: .2rem;
+    position: relative;
+}
+.price1,.price2{
+    color: #e60044;
+    font-size: .3rem;
+}
+.juan{
+    color: #ff4545;
+}
+.amount{
+    color: #9b9b9b;
+}
+.bao{
+    position: absolute;
+    right: 0;
+    color: #9b9b9b;
+}
+ .coupon-show {
+    position: absolute;
+    top: 2.2rem;
+    left: 0;
+    display: block;
+    width: 1.5rem;
+    height: .8rem;
+    background: url(../images/ttj/coupon-bg.png) no-repeat;
+    background-size: contain;
+    color: #fff;
+    font-size: .1rem;
+    padding:0 .1rem 0 0;
+    text-align: center;
+}
+
+/* 底部 */
+#fixed-nav {
+    position: fixed;
+    z-index: 995;
+    bottom: 0;
+    width: 100%;
+    height: .92rem;
+    background: rgb(0,0,0);
+    border: .04267rem solid #D8D8D8;
+    border-width: .04267rem 0 0;
+    display: flex;
+}
+#fixed-nav .fixed-navitem {
+    width: 20%;
+    background: transparent;
+    position: relative;
+    height: .92rem;
+}
+#fixed-nav .fixed-navitem .fixed-link {
+    display: block;
+    width: 100%;
+    height: .92rem;
+    background-size: 1.4rem auto;
+}
+#fixed-nav .fixed-navitem .fixed-link .fixed-text {
+    display: block;
+    text-align: center;
+    line-height: .45333rem;
+    padding-top: .56667rem;
+    height: .45333rem;
+    color: gray;
+    font-size: .15rem;
+}
+.today-navicon{
+    background: url(../images/256x196.3964fe354ef2e9bfb666e4b887a0f083.png) no-repeat center top;
+}
+.ttj-navicon{
+    background: url(../images/256x196.f7014aad2bfeb018af8eda190e3f4863.png) no-repeat center top;
+}
+.brand-navicon{
+    background: url(../images/256x196.45aef00fe1ddcdbbec7bdfe25fb8de3b.png) no-repeat center top;
+}
+.cart-navicon{
+    background: url(../images/256x196.6b00314d7571c6dcf9b0e4aab46c9316.png) no-repeat center top;
+}
+.my-navicon{
+    background: url(../images/256x196.0dec1b8fac1ce76e58b9bb18c2e2a166.png) no-repeat center top;
+}
+.red{
+    color: #e30c26 !important;
+}

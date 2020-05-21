@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>精选优惠折扣商品,天天特价商品,打折商品特卖低至9.9包邮 - 折800</title>
+    <link rel="stylesheet" href="css/taotejia.css">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/mui.css">
+</head>
+
+<body>
+    <div id="title-wrap">淘特价</div>
+    <!-- 头部导航 -->
+    <nav id="nav-wrap" style="position: relative; top: 0;">
+        <div class="nav-content">
+            <div class="item all on">
+                <a><span>精选</span></a>
+            </div>
+            <div class="swiper-container " style="display: flex;width: 80%;margin-left: -.3rem;">
+                <div class="swiper-wrapper nav-list">
+                    <div class="swiper-slide">
+                        <a><span>服装</span></a>
+                    </div>
+                    <div class="swiper-slide" style="margin-left: -.2rem;">
+                        <a><span>居家百货</span></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a><span>鞋包配饰</span></a>
+                    </div>
+                    <div class="swiper-slide" id="swiper">
+                        <a><span>母婴儿童</span></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a><span>美食</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- 轮播 -->
+    <div class="mui-slider">
+        <ul class="mui-slider-group  mui-slider-loop">
+            <li class="mui-slider-item mui-slider-item-duplicate">
+                <img src="images/750x286.aaef5af9c76e37e7222f4f065e6d9a39.jpg" width="100%">
+            </li>
+            <li class="mui-slider-item">
+                <img src="images/750x286.0a4665c9c8ab986ac87a6c25a0f19658.jpg" width="100%">
+            </li>
+            <li class="mui-slider-item">
+                <img src="images/750x286.5b0ac45fda62f2abb0b580db5a2cf0d3.jpg" width="100%">
+            </li>
+            <li class="mui-slider-item">
+                <img src="images/750x286.2deaeea699acf7cd7ffc0c2fcb2aee61.jpg" width="100%">
+            </li>
+            <li class="mui-slider-item">
+                <img src="images/750x286.aaef5af9c76e37e7222f4f065e6d9a39.jpg" width="100%">
+            </li>
+            <li class="mui-slider-item mui-slider-item-duplicate">
+                <img src="images/750x286.0a4665c9c8ab986ac87a6c25a0f19658.jpg" width="100%">
+            </li>
+        </ul>
+    </div>
+    <!-- 中间导航 -->
+    <div class="mid-nav">
+        <ul class="mid-list">
+            <li>
+                <img src="images/100x100.d0ffb17bd2b9d17d0ba85f0edbac7ccf.png">
+                <a>9.9包邮</a>
+            </li>
+            <li>
+                <img src="images/100x100.665566c314fe39e0680c9515698718e2.png">
+                <a>百元卷</a>
+            </li>
+            <li>
+                <img src="images/100x100.29b470be1d383b79b5b86add6b4fb657.png">
+                <a>品牌折扣</a>
+            </li>
+            <li>
+                <img src="images/100x100.39dcb48be145affa8c8789b64e1915c1.png">
+                <a>薅羊毛</a>
+            </li>
+            <li>
+                <img src="images/100x100.d0b4aed7e4a2725a863577a1831f78a0.png">
+                <a>天天特价</a>
+            </li>
+        </ul>
+    </div>
+    <!-- 排行榜 -->
+    <div class="mid-rank">
+        <img src="images/375x260.605e2f71f69c5a7919984d3026fb235e.png">
+        <img src="images/375x260.fed3dfe05cdff3b7ab67d894ef84de55.jpg">
+    </div>
+    <!-- 内容 -->
+    <div id="refreshContainer" class=" content">
+        <ul id="ul">
+            <!-- <li v-for="list in lists">
+                    <img :src="list.img">
+                    <h3>{{list.title}}</h3>
+                    <p>
+                        <span class="price1">￥</span>
+                        <span class="price2">{{list.price}}</span>
+                        <span class="juan">劵后</span>
+                        <span class="bao">包邮</span>
+                    </p>
+                    <p style="margin-top: .1rem;">
+                        <span class="amount">{{list.num}}</span>
+                        <span class="bao">去天猫</span>
+                    </p>
+                    <span class="coupon-show">{{list.currentprice}}元券<br />点此领取</span>
+                </li> -->
+        </ul>
+    </div>
+
+    <!-- 底部 -->
+    <ul id="fixed-nav" style="background-color: #ffffff">
+        <li class="fixed-navitem today-item " data-point="home">
+            <a class="fixed-link today-navicon">
+                <span class="fixed-text">今日特卖</span>
+            </a>
+        </li>
+        <li class="fixed-navitem ttj-item on" data-point="cpc">
+            <a class="fixed-link ttj-navicon">
+                <span class="fixed-text red">淘特价</span>
+            </a>
+        </li>
+        <li class="fixed-navitem brand-item " data-point="brand">
+            <a class="fixed-link brand-navicon">
+                <span class="fixed-text">品牌团</span>
+            </a>
+        </li>
+        <li class="fixed-navitem cart-item " data-point="shopcart">
+            <a class="fixed-link cart-navicon">
+                <span class="fixed-text">购物车</span>
+            </a>
+        </li>
+        <li class="fixed-navitem my-item " data-point="userinfor">
+            <a class="fixed-link my-navicon">
+                <span class="fixed-text">我的</span>
+            </a>
+        </li>
+    </ul>
+</body>
+<script src="js/Adaptive.js"></script>
+<script src="js/swiper-3.4.2.min.js"></script>
+<script src="js/mui.min.js"></script>
+<script src="js/getdata.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.min.js"></script>
+<script src="js/zepto.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 4,
+        paginationClickable: true,
+        spaceBetween: 0,
+    });
+    var gallery = mui('.mui-slider');
+    gallery.slider({
+        interval: 5000//自动轮播周期，若为0则不自动播放，默认为0；
+    });
+    var navwrap = document.getElementById("nav-wrap");
+    var navoffset = navwrap.offsetTop;
+    document.addEventListener("scroll", function () {
+        if (window.pageXOffset <= navoffset) {
+            navwrap.style.position = "fixed";
+            navwrap.style.top = "0";
+            navwrap.style.background = "white";
+        } else {
+            navwrap.style.position = "relative";
+            navwrap.style.top = "0";
+        }
+    });
+
+    // new Vue({
+    //     el: '#content',
+    //     data: {
+    //         lists: []
+    //     },
+    //     mounted() {
+    //         axios.get('http://localhost:3000/list').then(res => {
+    //             // console.log(res.data.data);
+    //             this.lists = this.lists.concat(res.data.data)
+    //         }).catch(err => {
+    //             console.log(err);
+    //         })
+    //     }
+    // })
+    var num = 1;
+    var lists = [];
+    mui.init({
+        pullRefresh: {
+            container: "#refreshContainer",//下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
+            up: {
+                height: 50,//可选.默认50.触发上拉加载拖动距离
+                contentrefresh: "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+                contentnomore: '没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+                callback: up //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+            }
+        }
+    });
+
+    function up() {
+        setTimeout(() => {
+            num += 1
+            if (num > 2) {
+                num = 1;
+            }
+            getData(num)
+            this.endPullupToRefresh(false)
+        }, 1500)
+    }
+    function getData(idx = 1) {
+        $.ajax({
+            type: "get",
+            url: "http://localhost:3000/list",
+            data: {
+                id: (idx - 1) * 10,
+
+            },
+            success(res) {
+                // console.log(res.data)
+                lists = []
+                lists = res.data;
+                for (var i = 0; i < lists.length; i++) {
+                    document.getElementById('ul').innerHTML += `
+								<li>
+                                    <img src="${lists[i].img}">
+                                    <h3>${lists[i].title}</h3>
+                                    <p>
+                                        <span class="price1">￥</span>
+                                        <span class="price2">${lists[i].price}</span>
+                                        <span class="juan">劵后</span>
+                                        <span class="bao">包邮</span>
+                                    </p>
+                                    <p style="margin-top: .1rem;">
+                                        <span class="amount">${lists[i].num}</span>
+                                        <span class="bao">去天猫</span>
+                                    </p>
+                                    <span class="coupon-show">${lists[i].currentprice}元券<br />点此领取</span>
+                                </li>
+							`
+                }
+            },
+            error(err) {
+                console.log(err)
+            }
+        });
+    };
+    getData();
+</script>
+
+</html>
