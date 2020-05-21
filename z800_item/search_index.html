@@ -9,6 +9,7 @@
     <link href="https://m.zhe800.com/favicon.ico" type="image/x-icon" rel="shortcut icon" />
     <link rel="stylesheet" href="./css/search_index.css">
     <script src="./js/Adaptive.js"></script>
+    <script src="./js/zepto.min.js"></script>
 </head>
 
 <body>
@@ -16,13 +17,15 @@
         <!-- 头部搜索框 -->
         <div class="header clearfix">
             <div class="back">
-                <img src="./images/arrow-left-copy.png" alt="">
+                <a href="SpecialSale_index.html">
+                    <img src="./images/arrow-left-copy.png" alt="">
+                </a>
             </div>
             <div class="search-box">
                 <img src="./images/sousuo.png" alt="" class="search-img">
-                <input type="text" placeholder="搜低价商品">
+                <input type="text" placeholder="搜低价商品" class="ipt">
             </div>
-            <div class="search-btn">
+            <div class="search-btn" onclick="search()">
                 搜索
             </div>
         </div>
@@ -38,8 +41,91 @@
                 <a href="" style="color: #e60044;">小黄电风扇29.9元</a>
             </span>
         </div>
+        <!-- 搜索结果 -->
+        <div class="search_result">
+            <!-- 种类区域 -->
+            <div class="sort">
+                <ul class="filter-bar">
+                    <li>
+                        <span>默认</span>
+                    </li>
+                    <li>
+                        <span>销量</span>
+                    </li>
+                    <li>
+                        <span>特卖商城</span>
+                    </li>
+                    <li>
+                        <span>筛选</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- 商品内容 -->
+            <div class="goods-content">
+                <ul class="goods">
+
+                </ul>
+            </div>
+        </div>
+        <!-- 无商品 -->
+        <p class="nogoods">暂无此类商品</p>
     </div>
-    <script src="./js/search_index.js"></script>
+    <script>
+        var goods = document.querySelector('.goods');
+        var ipt = document.querySelector('.ipt');
+        var hot = document.querySelector('.hot');
+        var search_result = document.querySelector('.search_result');
+        var nogoods = document.querySelector('.nogoods');
+        var sort = document.querySelector('.sort');
+        function search() {
+            var val = ipt.value;
+            goods.innerHTML = '';
+            $.ajax({
+                type: "get",
+                url: "http://localhost:3000/search",
+                data: {
+                    value: val
+                },
+                success(res) {
+                    if (val == '') {
+                        alert('你搜你也美')
+                    } else {
+                        // console.log(res.data)
+                        lists = [];
+                        lists = res.data;
+                        if (lists.length == 0) {
+                            hot.style.display = 'none';
+                            search_result.style.display = 'block';
+                            nogoods.style.display = 'block';
+                        } else {
+                            hot.style.display = 'none';
+                            nogoods.style.display = 'none';
+                            search_result.style.display = 'block';
+                            for (var i = 0; i < lists.length; i++) {
+                                goods.innerHTML += `
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="${lists[i].img}"
+                                            alt="">
+                                        <div class="title">
+                                        ${lists[i].title}
+                                        </div>
+                                        <div class="price">
+                                            ${lists[i].price}
+                                        </div>
+                                    </a>
+                                </li>
+            				`
+                            }
+                        }
+                    }
+                },
+                error(err) {
+                    console.log(err)
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

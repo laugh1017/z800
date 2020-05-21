@@ -29,4 +29,15 @@ app.get('/list', (req, res) => {
         res.json(obj)
     })
 })
+// 搜索数据
+app.get('/search', (req, res) => {
+    // console.log(req.query.value)
+    connection.query("select * from specialsale_index where title like '%"+req.query.value+"%'",function (err, rows) {
+        const obj = {
+            status: 200,
+            data: rows
+        }
+        res.json(obj)
+    })
+})
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

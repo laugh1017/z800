@@ -103,7 +103,7 @@ window.addEventListener('load', function () {
                 lists = res.data;
                 for (var i = 0; i < lists.length; i++) {
                     document.querySelector('.goods').innerHTML += `
-                        <li>
+                    <li>
                         <a href="javascript:void(0)">
                             <img src="${lists[i].img}" alt="">
                             <div class="title">
@@ -150,5 +150,6 @@ window.addEventListener('load', function () {
             totop.style.display = 'none';
         }
     })
+
     
 })
