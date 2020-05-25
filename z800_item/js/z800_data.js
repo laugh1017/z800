@@ -40,4 +40,15 @@ app.get('/search', (req, res) => {
         res.json(obj)
     })
 })
+// 请求商品详情页数据
+app.get('/details', (req, res) => {
+    // console.log(req.query.id)
+    connection.query("select * from specialsale_commoditydetails where id="+req.query.id+"",function (err, rows) {
+        const obj = {
+            status: 200,
+            data: rows
+        }
+        res.json(obj)
+    })
+})
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

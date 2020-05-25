@@ -67,6 +67,8 @@ window.addEventListener('load', function () {
             clearInterval(timer);
         }
     }, 1000)
+
+    
     // 获取主页列表数据
     var num = 1;
     var lists = []
@@ -74,8 +76,8 @@ window.addEventListener('load', function () {
         pullRefresh: {
             container: "#refreshContainer",
             up: {
-                height: 50,
-                contentrefresh: "正在加载...",
+                // height: 50,
+                // contentrefresh: "正在加载...",
                 callback: up
             }
         }
@@ -103,7 +105,7 @@ window.addEventListener('load', function () {
                 lists = res.data;
                 for (var i = 0; i < lists.length; i++) {
                     document.querySelector('.goods').innerHTML += `
-                    <li>
+                    <li class="goodsli" data-index="${lists[i].id}">
                         <a href="javascript:void(0)">
                             <img src="${lists[i].img}" alt="">
                             <div class="title">
@@ -123,12 +125,18 @@ window.addEventListener('load', function () {
         });
     }
     getData()
+    // 发送到详情页id
+    mui(".goods").on('tap','.goodsli',function(){
+        var id=this.dataset['index']
+        window.location.href='SpecialSale_details.html?id='+id;
+    })
     // 返回顶部
     var totop = document.querySelector('.totop');
     var goods = document.querySelector('.goods');
     var killactivity = document.querySelector('.killactivity');
     totop.addEventListener('touchstart', function () {
         animate(window, 0);
+        // location.replace(location)
     })
     function animate(obj, target, callback) {
         clearInterval(obj.timer);
@@ -151,5 +159,4 @@ window.addEventListener('load', function () {
         }
     })
 
-    
 })

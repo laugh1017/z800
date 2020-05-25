@@ -103,7 +103,7 @@
                             search_result.style.display = 'block';
                             for (var i = 0; i < lists.length; i++) {
                                 goods.innerHTML += `
-                                <li>
+                                <li onclick="sendTo(${lists[i].id})">
                                     <a href="javascript:void(0)">
                                         <img src="${lists[i].img}"
                                             alt="">
@@ -124,6 +124,9 @@
                     console.log(err)
                 }
             });
+        }
+        function sendTo(id) {
+            window.location.href = 'SpecialSale_details.html?id=' + id;
         }
     </script>
 </body>

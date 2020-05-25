@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link href="https://m.zhe800.com/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link rel="stylesheet" href="./css/SpecialSale_details.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <script src="./js/Adaptive.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/vue.js"></script>
+    <script src="./js/axios.js"></script>
+    <title>zhe800商品</title>
+</head>
+
+<body>
+    <div class="container" id="app">
+        <!-- swiper轮播图 -->
+        <div class="banner">
+            <div class="swiper-container swiper-container-horizontal">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide-active">
+                        <img :src="lists.img1" alt="">
+                    </div>
+                    <div class="swiper-slide swiper-slide-next">
+                        <img :src="lists.img2" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img :src="lists.img3" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img :src="lists.img4" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img :src="lists.img5" alt="">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active">
+                    </span>
+                    <span class="swiper-pagination-bullet">
+                    </span>
+                    <span class="swiper-pagination-bullet">
+                    </span>
+                    <span class="swiper-pagination-bullet">
+                    </span>
+                    <span class="swiper-pagination-bullet">
+                    </span>
+                </div>
+            </div>
+            <div class="image_item"></div>
+        </div>
+        <!-- 标题价格部分 -->
+        <div class="title-price">
+            <p class="title" v-html="lists.title"></p>
+            <div class="price">
+                <strong v-html="lists.price"></strong>
+                <del v-html="lists.delprice"></del>
+                <span>包邮</span>
+                <span>积分最高可抵¥2</span>
+            </div>
+        </div>
+        <!-- 分隔盒子 -->
+        <div class="spacediv"></div>
+        <!-- 领券促销 -->
+        <div class="plateforms">
+            <div class="coupon">
+                <span class="coupontxt">
+                    领券
+                </span>
+                <div class="platcoupon">
+                    <span class="couponred">
+                        满1元9折
+                    </span>
+                    <span class="right_arrow">
+                    </span>
+                </div>
+                <div class="platcoupon">
+                    <span class="couponred">
+                        满99元减5元
+                    </span>
+                    <span class="right_arrow">
+                    </span>
+                </div>
+                <div class="arrowimg">
+                    <img src="http://i0.tuanimg.com/ms/zhe800h5/dist/img/detail_v2/arrow2.png" alt="">
+                </div>
+            </div>
+            <div class="promotion">
+                <span class="promotiontxt">促销</span>
+                <span class="mz">满折</span>
+                <span class="content">满1件5折</span>
+                <div class="arrowimg">
+                    <img src="http://i0.tuanimg.com/ms/zhe800h5/dist/img/detail_v2/arrow2.png" alt="">
+                </div>
+            </div>
+            <div class="promotion promotion2">
+                <span class="promotiontxt2">促销</span>
+                <span class="mz">积分</span>
+                <span class="content">评价最多送27积分</span>
+            </div>
+        </div>
+        <!-- 分隔盒子 -->
+        <div class="spacediv"></div>
+        <!-- 颜色参数 -->
+        <div class="colorparameter">
+            <div class="color">
+                <span class="colortxt">请选择颜色</span>
+                <div class="hasSize"><i></i>尺码表</div>
+                <div class="arrowimg">
+                    <img src="http://i0.tuanimg.com/ms/zhe800h5/dist/img/detail_v2/arrow2.png" alt="">
+                </div>
+            </div>
+            <div class="parameter">
+                <span class="parametertxt">商品参数</span>
+                <div class="arrowimg">
+                    <img src="http://i0.tuanimg.com/ms/zhe800h5/dist/img/detail_v2/arrow2.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- 分隔盒子 -->
+        <div class="spacediv"></div>
+        <!-- 查看评价 -->
+        <div class="evaluate">
+            <span class="evaluatetxt">查看评价</span>
+            <div class="arrowimg">
+                <img src="http://i0.tuanimg.com/ms/zhe800h5/dist/img/detail_v2/arrow2.png" alt="">
+            </div>
+        </div>
+        <!-- 空白 -->
+        <div class="margin"></div>
+        <!-- 底部nav -->
+        <div class="footnav">
+            <ul class="leftnav">
+                <li>
+                    <i>
+                        <img src="http://i0.tuanimg.com/ms/zhe800h5/dist/img/detail_v2/im_status.png" alt="">
+                    </i>
+                    客服
+                </li>
+                <li>
+                    <i>
+                        <img src="http://i0.tuanimg.com/ms/zhe800h5/dist/img/detail_v2/sp_save_v2.png" alt="">
+                    </i>
+                    收藏
+                </li>
+                <li>
+                    <i>
+                        <img src="http://i0.tuanimg.com/ms/zhe800h5/dist/img/detail_v2/ico_shopcart.png" alt="">
+                    </i>
+                    购物车
+                </li>
+            </ul>
+            <ul class="rightnav">
+                <li class="shopcar">
+                    加入购物车
+                </li>
+                <li class="buy">
+                    立即购买
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // 请求数据渲染详情页
+        new Vue({
+            el: "#app",
+            data: {
+                lists: [],
+            },
+            mounted() {
+                axios.get('http://localhost:3000/details', {
+                    params: {
+                        id: window.location.search.split('=')[1],
+                    }
+                }).then(res => {
+                    // console.log(res.data.data[0].img1);
+                    this.lists = res.data.data[0];
+                }).catch(err => {
+                    console.log(erroy);
+                })
+            }
+        })
+        // swiper轮播图
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+        });
+    </script>
+</body>
+
+</html>

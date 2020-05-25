@@ -1,0 +1,328 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Microsoft YaHei",Arial;
+}
+body {
+    background-color: #F0F0F0;
+    line-height: normal;
+}
+.clearfix:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+img{
+    display: block;
+}
+a{
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent; 
+    color: #666;
+}
+ul{
+    list-style: none;
+}
+/* swiper轮播图 */
+.banner{
+    width: 100%;
+    position: relative;
+}
+.banner img{
+    width: 100%;
+}
+.swiper-pagination-bullet-active{
+    background: #999!important;
+    border: 1px solid #dde1e3;
+}
+.image_item {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    height: .88rem;
+    width: .88rem;
+    background: url(http://i0.tuanimg.com/ms/zhe800h5/dist/img/detail_v2/pic_item.png) no-repeat;
+    background-size: cover;
+    z-index: 99;
+}
+/* 标题价格部分 */
+.title-price{
+    width: 100%;
+    padding:4% 4% 3%;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.title-price .title{
+    font-size: .3rem;
+    color: #333;
+    margin-right: 5%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.title-price .price{
+    display: flex;
+}
+.title-price strong{
+    display: block;
+    font-size: .45rem;
+    font-weight: 400;
+    color: #333;
+}
+.title-price del{
+    font-size: .3rem;
+    color: #999;
+    padding: 2% 2% 0 2%;
+}
+.title-price span{
+    display: inline-block;
+    height: .25rem;
+    line-height: .25rem;
+    vertical-align: middle;
+    margin-right: 1.5%;
+    margin-top: 3%;
+    padding: 0 1%;
+    font-size: .2rem;
+    color: #e60044;
+    border: 1px solid #e60044;
+    border-radius: 2px;
+}
+/* 分隔盒子 */
+.spacediv {
+    height: .25rem;
+    width: 100%;
+    background-color: #f8f8f8;
+}
+/* 领券促销 */
+.plateforms{
+    width: 100%;
+    padding: 0 4%;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.plateforms .coupon{
+    display: flex;
+    padding: 3% 0;
+    border-bottom: 1px solid rgba(153, 153, 153, 0.281);
+}
+.plateforms .coupon .coupontxt{
+    font-size: .3rem;
+    color: #999;
+    margin-right: 3%;
+}
+.plateforms .coupon .platcoupon{
+    display: flex;
+    padding: .5% 0;
+    position: relative;
+    margin-right: 5%;
+}
+.plateforms .coupon .platcoupon .couponred{
+    color: #fff;
+    display: inline-block;
+    height: 0.37rem;
+    line-height: .37rem;
+    font-size: .2rem;
+    text-align: center;
+    padding: 0 .08rem;
+    background: #e60044;
+}
+.plateforms .coupon .platcoupon .right_arrow{
+    position: absolute;
+    top: .035rem;
+    right: -0.18rem;
+    display: inline-block;
+    width: 0.2rem;
+    height: .366rem;
+    background: url(http://i0.tuanimg.com/ms/zhe800h5/dist/img/detail_v2/redarrow_v2.png) no-repeat;
+    background-size: .2rem .366rem;
+}
+.plateforms .coupon .arrowimg{
+    width: 3%;
+    position: absolute;
+    right: 3%;
+}
+.plateforms .coupon .arrowimg img{
+    width: 100%;
+}
+.plateforms .promotion{
+    display: flex;
+    padding: 3% 0;
+    position: relative;
+}
+.plateforms .promotion2{
+    border-bottom: 1px solid rgba(153, 153, 153, 0.281);
+}
+.plateforms .promotion .promotiontxt{
+    font-size: .3rem;
+    color: #999;
+    margin-right: 3%;
+}
+.plateforms .promotion .mz{
+    display: inline-block;
+    height: .25rem;
+    line-height: .25rem;
+    vertical-align: middle;
+    margin-right: 2.5%;
+    margin-top: 1.3%;
+    font-size: .2rem;
+    color: #e60044;
+    border: 1px solid #e60044;
+    border-radius: 2px;
+}
+.plateforms .promotion .content{
+    font-size: .23rem;
+    margin-top: 1%;
+    color: #666;
+}
+.plateforms .promotion .arrowimg{
+    width: 3%;
+    position: absolute;
+    right: -1%;
+}
+.plateforms .promotion .arrowimg img{
+    width: 100%;
+}
+.plateforms .promotion .promotiontxt2{
+    font-size: .3rem;
+    color: #999;
+    margin-right: 3%;
+    opacity: 0;
+}
+/* 颜色参数 */
+.colorparameter{
+    width: 100%;
+    padding: 0 4%;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.colorparameter .color{
+    display: flex;
+    padding: 3% 0;
+    position: relative;
+    border-bottom: 1px solid rgba(153, 153, 153, 0.281);
+}
+.colorparameter .color .colortxt{
+    font-size: .3rem;
+}
+.colorparameter .color .hasSize{
+    position: absolute;
+    right: 10%;
+    top: 0;
+    height: .4rem;
+    line-height: .4rem;
+    font-size: .18rem;
+    color: #b5b5b5;
+}
+.colorparameter .color .hasSize i{
+    display: block;
+    width: .5rem;
+    height: .2rem;
+    margin: .16rem auto 0;
+    background: url(http://i0.tuanimg.com/ms/zhe800h5/dist/img/detail_v2/charticonv2.png) no-repeat;
+    background-size: contain;
+}
+.colorparameter .color .arrowimg{
+    width: 3%;
+    position: absolute;
+    right: -1%;
+}
+.colorparameter .color .arrowimg img{
+    width: 100%;
+}
+.colorparameter .parameter{
+    display: flex;
+    padding: 3% 0;
+    position: relative;
+}
+.colorparameter .parameter .parametertxt{
+    font-size: .3rem;
+}
+.colorparameter .parameter .arrowimg{
+    width: 3%;
+    position: absolute;
+    right: -1%;
+}
+.colorparameter .parameter .arrowimg img{
+    width: 100%;
+}
+/* 查看评价 */
+.evaluate{
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    padding: 3% 4%;
+    position: relative;
+    box-sizing: border-box;
+}
+.evaluate .evaluatetxt{
+    font-size: .3rem;
+}
+.evaluate .arrowimg{
+    width: 3%;
+    position: absolute;
+    right: 3%;
+}
+.evaluate .arrowimg img{
+    width: 100%;
+}
+/* 空白 */
+.margin{
+    background-color: #fff;
+    padding: 7% 0;
+}
+/* 底部nav */
+.footnav{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    z-index: 999;
+}
+.footnav .leftnav{
+    width: 45%;
+    display: flex;
+    background-color: #f9f9f9;
+}
+.footnav .leftnav li{
+    width: 33.3333333%;
+    padding: 3% 0;
+    text-align: center;
+    font-size: .2rem;
+    border-top: 1px solid rgba(153, 153, 153, 0.281);
+    border-right: 1px solid rgba(153, 153, 153, 0.281);
+}
+.footnav .leftnav li i{
+    display: block;
+    width: .4rem;
+    height: .4rem;
+    overflow: hidden;
+    margin-left: 33%;
+    margin-bottom: 8%;
+}
+.footnav .leftnav li i img{
+    width: 100%;
+}
+.footnav .rightnav{
+    width: 55%;
+    display: flex;
+}
+.footnav .rightnav li{
+    width: 50%;
+    text-align: center;
+    font-size: .3rem;
+    padding: 6.8% 0;
+}
+.footnav .rightnav .shopcar{
+    vertical-align: middle;
+    background-color: #ff8b8b;
+    color: #fff;
+}
+.footnav .rightnav .buy{
+    vertical-align: middle;
+    background-color: #e60044;
+    color: #fff;
+}
