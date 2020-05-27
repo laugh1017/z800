@@ -1,0 +1,578 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Microsoft YaHei",Arial;
+}
+a{
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent; 
+    color: #666!important;
+}
+.clearfix:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+ul{
+    list-style: none;
+}
+img{
+    display: block;
+}
+body{
+    background-color: #f5f5f5;
+}
+/* 签到部分 */
+.signin{
+    width: 100%;
+    box-sizing: border-box;
+    display: none;
+}
+/* 头部 */
+.signheader{
+    width: 100%;
+    padding: 2%;
+    background:radial-gradient(circle,#F65833,#F3283A,#F3283A);
+    box-sizing: border-box;
+}
+.signheader .my-score{
+    float: left;
+    color: #fff;
+    font-size: .25rem;
+}
+.signheader .my-score .score b{
+    font-size: .5rem;
+}
+.signheader .my-score .cash{
+    display: block;
+}
+.signheader .strategy{
+    float: right;
+    font-size: .25rem;
+    margin-top: 2%;
+    color: #fff;
+}
+.signheader .yet{
+    background-color: #fff;
+    font-size: .3rem;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    color: #FF4545;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5% 6%;
+}
+.signheader .continuous{
+    font-size: .3rem;
+    text-align: center;
+    margin: 3%;
+    color: #fff;
+}
+/* 图片nav */
+.imgnav{
+    width: 100%;
+    background-color: #fff;
+    padding: 4% 2%;
+    box-sizing: border-box;
+}
+.imgnav ul{
+    width: 100%;
+    display: flex;
+}
+.imgnav ul li{
+    width: 20%;
+    text-align: center;
+    font-size: .3rem;
+    padding-right: 4%;
+}
+.imgnav ul li:last-child{
+    padding-right: 0;
+}
+.imgnav ul li img{
+    width: 100%;
+}
+.imgnav ul li p{
+    display: block;
+    margin-top: 10%;
+    font-size: .22rem;
+}
+/* config区域 */
+.config1{
+    width: 100%;
+    margin-top: 3%;
+    display: flex;
+}
+.config1 .left{
+    width: 50%;
+    border-right: .8px solid #ccc;
+    border-bottom: .8px solid #ccc;
+    border-top: .8px solid #ccc;
+}
+.config1 .right{
+    width: 50%;
+    border-top: .8px solid #ccc;
+    border-bottom: .8px solid #ccc;
+}
+.config1 .left img,.config1 .right img{
+    width: 100%;
+}
+.config2{
+    width: 100%;
+    display: flex;
+}
+.config2 .left{
+    width: 50%;
+    border-right: .8px solid #ccc;
+    border-bottom: .8px solid #ccc;
+}
+.config2 .right{
+    width: 50%;
+    border-bottom: .8px solid #ccc;
+}
+.config2 .left img,.config2 .right img{
+    width: 100%;
+}
+/* swiper轮播图 */
+.banner{
+    width: 100%;
+    padding: 2% 0;
+}
+.banner img{
+    width: 100%;
+}
+/* 商品区域 */
+.deal{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    display: flex;
+    padding: 1% 3% 0 0;
+}
+.deal:first-child{
+    padding-top: 0;
+}
+.deal .dealimg{
+    width: 40%;
+}
+.deal .dealimg img{
+    width: 100%;
+}
+.deal .dealtext{
+    width: 60%;
+    font-size: .3rem;
+    padding: 2% 2% 0;
+}
+.deal .dealtext .deal-tit{
+    color: #6B6B6B;
+}
+.deal .dealtext .rule{
+    color: #9B9B9B;
+    padding: 12% 0;
+}
+.deal .dealtext .price{
+    font-size: .2rem;
+    color: #9B9B9B;
+}
+.deal .dealtext .price em{
+    color: #FF4545;
+}
+.deal .dealtext .price b{
+    font-size: .3rem;
+    color: #FF4545;
+}
+/* 9.9包邮 */
+.Pinkage{
+    width: 100%;
+    display: none;
+}
+/* 头部 */
+.Pinkage .header{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2% 2%;
+    text-align: center;
+    display: flex;
+    background-color: #fff;
+}
+.Pinkage .header .leftarrow{
+    width: 6%;
+    position: absolute;
+}
+.Pinkage .header .leftarrow img{
+    width: 100%;
+}
+.Pinkage .header .txt{
+    font-size: .3rem;
+    margin: 0 auto;
+}
+/* nav */
+.nav_content{
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    border-top: 0.5px solid rgba(204, 204, 204, 0.589);
+    border-bottom: 0.5px solid rgba(204, 204, 204, 0.589);
+    z-index: 2;
+    box-sizing: border-box;
+}
+.shan{
+    display: none;
+    position: fixed;
+    right: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .5;
+    z-index: 1;
+    box-sizing: border-box;
+}
+/* 头次显示 */
+.nav{
+    width: 100%;
+    font-size: .28rem;
+    padding: 1.5% 2.5%;
+    box-sizing: border-box;
+}
+.nav-f{
+    width: 100%;
+    display: flex;
+}
+.nav .recommend{
+    width: 15%;
+}
+.nav .recommend span{
+    width: 57%;
+    color: #e30c26;
+    border-bottom: 1.5px solid #e30c26;
+    font-size: .28rem;
+    padding-bottom: 9.4%;
+}
+.nav .nav-list{
+    width: 75%;
+    overflow: hidden;
+}
+.nav .nav-list ul{
+    width: 295%;
+}
+.nav .nav-list ul li{
+    float: left;
+    margin-left: 3%;
+}
+.nav .nav-list ul li:first-child{
+    margin-left: 0;
+}
+.nav .classify{
+    width: 6%;
+    padding-left: 5%;
+}
+.nav .classify img{
+    width: 100%;
+    display: inline-block;
+}
+/* 第二次显示 */
+.nav_content .content {
+    width: 100%;
+    position: relative;
+    font-size: .3rem;
+    display: none;
+}
+.choose-sij{
+    width: 100%;
+    display: flex;
+    padding: 1.5% 3%;
+    box-sizing: border-box;
+}
+.choose-sij .choose{
+    width: 95%;
+    color: #666;
+}
+.choose-sij .classify2{
+    width: 5%;
+}
+.choose-sij .classify2 .sij{
+    width: 100%;
+    transform: rotateX(180deg);
+    display: inline-block;
+}
+.content-tap{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #efeded;
+    transition: all .2s linear;
+    z-index: 10;
+}
+.content-tap ul{
+    width: 100%;
+}
+.content-tap ul li{
+    width: 24.7%;
+    float: left;
+    text-align: center;
+    border-right: .02133rem solid #ccc;
+    border-bottom: .02133rem solid #ccc;
+    padding: 3% 0;
+}
+.content-tap img{
+    width: 10%;
+}
+/* 种类区域 */
+.sort{
+    width: 100%;
+    background-color: #fff;
+}
+.filter-bar{
+    width: 100%;
+    display: flex;
+    padding: 2% 0;
+    border-top: 1px solid #d5d5d5;
+    border-bottom: 1px solid #d5d5d5;
+}
+.filter-bar li{
+    width: 25%;
+    font-size: .3rem;
+    text-align: center;
+    color: #9d9d9d;
+}
+.filter-bar li span{
+    display: block;
+}
+/* 商品内容 */
+.goods-content{
+    width: 100%;
+    background-color: #fff;
+}
+.goods-content .goods{
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    padding-top: 3%;
+    background-color: #fff;
+}
+.goods-content .goods li{
+    width: 45.5%;
+    text-align: center;
+    margin: 0 0 3% 3%;
+    border: .8px solid #E5E5E5;
+}
+.goods-content .goods li img{
+    width: 100%;
+}
+.goods-content .goods li .title{
+    overflow: hidden;
+    font-size: .266rem;
+    padding: 4% 2%;
+    font-weight: 400;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.goods-content .goods li .price{
+    font-size: .31rem;
+    color: #E60044;
+    overflow: hidden;
+    padding-bottom: 3%;
+}
+/* 淘爆款 */
+.hotcake{
+    width: 100%;
+    box-sizing: border-box;
+    display: none;
+}
+.contents{
+    margin: 3% 0;
+    background-color: #fff;
+}
+/* 头部 */
+.hotcakeheader{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    padding: 3% 4% 0;
+}
+.hotcakeheader .img{
+    width: 15%;
+}
+.hotcakeheader .img img{
+    width: 100%;
+}
+.hotcakeheader .name-time{
+    width: 68%;
+    padding-left: 2%;
+}
+.hotcakeheader .name-time .name{
+    display: block;
+    font-size: .3rem;
+}
+.hotcakeheader .name-time .time{
+    display: block;
+    font-size: .25rem;
+    margin-top: 5%;
+    color: #999;
+}
+.hotcakeheader .shareval{
+    font-size: .2rem;
+    margin: auto;
+}
+/* 内容部分 */
+.contenttwo{
+    width: 100%;
+    box-sizing: border-box;
+    font-size: .32rem;
+    padding: 4%;
+    color: #666;
+}
+.contenttwo .img{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    padding-top: 3%;
+}
+.contenttwo .img .leftimg{
+    width: 82%;
+    padding-right: 4%;
+}
+.contenttwo .img .leftimg img{
+    width: 100%;
+}
+.contenttwo .img .rightimg{
+    width: 40%;
+}
+.contenttwo .img .rightimg .img1{
+    width: 100%;
+    padding-bottom: 4%;
+}
+.contenttwo .img .rightimg .img1 img{
+    width: 100%;
+}
+.contenttwo .img .rightimg .img2{
+    width: 100%;
+}
+.contenttwo .img .rightimg .img2 img{
+    width: 100%;
+}
+/* 百元券 */
+.ticket{
+    width: 100%;
+    box-sizing: border-box;
+    display: none;
+}
+/* 头部 */
+.headernav{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    padding: 0 3%;
+    box-sizing: border-box;
+}
+.headernav li{
+    width: 25%;
+    font-size: .3rem;
+    text-align: center;
+    padding: 3% 0;
+}
+.headernav li:first-child{
+    border-bottom: 2px solid #e30c26;
+}
+/* 内容区域 */
+.ticketcon{
+    width: 100%;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    padding: 0 2%;
+}
+.ticketcon li{
+    width: 100%;
+    display: flex;
+    background-color: #fff;
+    box-sizing: border-box;
+    justify-content: space-between;
+    margin: 2% 0;
+    padding: 2%;
+    border-radius: 7.68px;
+}
+.ticketcon li .img{
+    width: 30%;
+}
+.ticketcon li .img img{
+    width: 100%;
+}
+.ticketcon li .con{
+    width: 70%;
+    padding-left: 3%;
+}
+.ticketcon li .con .tm{
+    font-size: .3rem;
+    color: #F70A0A;
+}
+.ticketcon li .con .title{
+    font-size: .3rem;
+    color: #333;
+    
+}
+.ticketcon li .con .round{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+}
+.ticketcon li .con .round .left{
+    width: 50%;
+}
+.ticketcon li .con .price{
+    font-size: .38rem;
+    color: #E60044;
+}
+.ticketcon li .con .origin{
+    display: inline;
+    font-size: .25rem;
+    color: #999;
+}
+.ticketcon li .con .sold{
+    font-size: .18rem;
+    color: #999;
+}
+.ticketcon li .con .mount{
+    width: 25%;
+    position: relative;
+    margin: auto 0;
+}
+.ticketcon li .con .mount span{
+    color: #fff;
+    font-size: .3rem;
+    text-align: center;
+    display: block;
+    position: relative;
+}
+.ticketcon li .con .mount img{
+    width: 100%;
+    position: absolute;
+}
+/* 天天特价 */
+.specialoffer{
+    width: 100%;
+    box-sizing: border-box;
+    display: none;
+}
+/* 头部nav */
+.offernav{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    padding: 0 3%;
+    box-sizing: border-box;
+}
+.offernav li{
+    width: 33.3333333%;
+    font-size: .3rem;
+    text-align: center;
+    padding: 3% 0;
+}
+.offernav li:first-child{
+    border-bottom: 2px solid #e30c26;
+}

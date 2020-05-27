@@ -5,20 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <title>折800官网</title>
+    <title>折800官网分类</title>
     <link href="https://m.zhe800.com/favicon.ico" type="image/x-icon" rel="shortcut icon" />
-    <link rel="stylesheet" href="css/SpecialSale_index.css">
+    <link rel="stylesheet" href="./css/SpecialSale_classify.css">
     <link rel="stylesheet" href="./css/mui.min.css">
     <link rel="stylesheet" href="./css/swiper.min.css">
-    <script src="js/Adaptive.js"></script>
-    <script src="./js/mui.min.js"></script>
+    <script src="./js/Adaptive.js"></script>
     <script src="./js/iscroll.js"></script>
     <script src="./js/swiper.min.js"></script>
-    <script src="./js/zepto.min.js"></script>
+    <script src="./js/vue.js"></script>
+    <script src="./js/axios.js"></script>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="app">
+        <!-- 下载app -->
+        <div class="downloadGuide">
+            <img src="https://z11.tuanimg.com/imagev2/wxyy/750x110.0b69422bdf3d9c9ba1db3b3a5a142348.png" alt="">
+        </div>
         <!-- 头部 -->
         <div class="header">
             <div class="left">
@@ -37,48 +41,48 @@
         <div class="nav_content">
             <div class="nav">
                 <div class="nav-f">
-                    <a href="" class="recommend">
+                    <a href="./SpecialSale_index.html" class="recommend">
                         <span>推荐</span>
                     </a>
                     <div class="nav-list">
                         <ul>
-                            <li class="navbar" data-index="1">
+                            <li>
                                 <a href="javascript:void(0)">女装</a>
                             </li>
-                            <li class="navbar" data-index="2">
+                            <li>
                                 <a href="javascript:void(0)">鞋包</a>
                             </li>
-                            <li class="navbar" data-index="3">
+                            <li>
                                 <a href="javascript:void(0)">居家</a>
                             </li>
-                            <li class="navbar" data-index="4">
+                            <li>
                                 <a href="javascript:void(0)">母婴儿童</a>
                             </li>
-                            <li class="navbar" data-index="5">
+                            <li>
                                 <a href="javascript:void(0)">美食</a>
                             </li>
-                            <li class="navbar" data-index="6">
+                            <li>
                                 <a href="javascript:void(0)">男装</a>
                             </li>
-                            <li class="navbar" data-index="7">
+                            <li>
                                 <a href="javascript:void(0)">内衣</a>
                             </li>
-                            <li class="navbar" data-index="8">
+                            <li>
                                 <a href="javascript:void(0)">数码家电</a>
                             </li>
-                            <li class="navbar" data-index="9">
+                            <li>
                                 <a href="javascript:void(0)">配饰</a>
                             </li>
-                            <li class="navbar" data-index="10">
+                            <li>
                                 <a href="javascript:void(0)">美妆</a>
                             </li>
-                            <li class="navbar" data-index="11">
+                            <li>
                                 <a href="javascript:void(0)">家纺</a>
                             </li>
-                            <li class="navbar" data-index="12">
+                            <li>
                                 <a href="javascript:void(0)">运动</a>
                             </li>
-                            <li class="navbar" data-index="13">
+                            <li>
                                 <a href="javascript:void(0)">中老年</a>
                             </li>
                         </ul>
@@ -99,43 +103,43 @@
                 </div>
                 <div class="content-tap">
                     <ul class="tap-list clearfix">
-                        <li class="navbar" data-index="1">
+                        <li>
                             <a href="javascript:void(0)">女装</a>
                         </li>
-                        <li class="navbar" data-index="2">
+                        <li>
                             <a href="javascript:void(0)">鞋包</a>
                         </li>
-                        <li class="navbar" data-index="3">
+                        <li>
                             <a href="javascript:void(0)">居家</a>
                         </li>
-                        <li class="navbar" data-index="4">
+                        <li>
                             <a href="javascript:void(0)">母婴儿童</a>
                         </li>
-                        <li class="navbar" data-index="5">
+                        <li>
                             <a href="javascript:void(0)">美食</a>
                         </li>
-                        <li class="navbar" data-index="6">
+                        <li>
                             <a href="javascript:void(0)">男装</a>
                         </li>
-                        <li class="navbar" data-index="7">
+                        <li>
                             <a href="javascript:void(0)">内衣</a>
                         </li>
-                        <li class="navbar" data-index="8">
+                        <li>
                             <a href="javascript:void(0)">数码家电</a>
                         </li>
-                        <li class="navbar" data-index="9">
+                        <li>
                             <a href="javascript:void(0)">配饰</a>
                         </li>
-                        <li class="navbar" data-index="10">
+                        <li>
                             <a href="javascript:void(0)">美妆</a>
                         </li>
-                        <li class="navbar" data-index="11">
+                        <li>
                             <a href="javascript:void(0)">家纺</a>
                         </li>
-                        <li class="navbar" data-index="12">
+                        <li>
                             <a href="javascript:void(0)">运动</a>
                         </li>
-                        <li class="navbar" data-index="13">
+                        <li>
                             <a href="javascript:void(0)">中老年</a>
                         </li>
                     </ul>
@@ -268,119 +272,150 @@
         <div class="banner">
             <div class="swiper-container swiper-container-horizontal">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="javascript:void(0)">
-                            <img src="https://z11.tuanimg.com/imagev2/wxyy/750x286.61029dd4d1d109dbad4db96fb05bbf64.jpg"
-                                alt="">
-                        </a>
+                    <div class="swiper-slide swiper-slide-active">
+                        <img :src="lists.bannerimg1">
                     </div>
                     <div class="swiper-slide">
-                        <a href="javascript:void(0)">
-                            <img src="https://z11.tuanimg.com/imagev2/wxyy/750x286.b6bbd23fc662d764cc8feeff5e9feb37.jpg"
-                                alt="">
-                        </a>
+                        <img :src="lists.bannerimg2">
                     </div>
                     <div class="swiper-slide">
-                        <a href="javascript:void(0)">
-                            <img src="https://z3.tuanimg.com/imagev2/wxyy/750x286.7b9ec9386a409bf6f2fd858fc1098d29.jpg"
-                                alt="">
-                        </a>
+                        <img :src="lists.bannerimg3">
                     </div>
                 </div>
                 <!-- Add Pagination -->
-                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span
-                        class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span
-                        class="swiper-pagination-bullet"></span></div>
+                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active">
+                    </span>
+                    <span class="swiper-pagination-bullet">
+                    </span>
+                    <span class="swiper-pagination-bullet">
+                    </span>
+                </div>
             </div>
         </div>
-        <!-- 图片nav部分 -->
-        <div class="nav-img clearfix">
-            <ul>
-                <li class="texts" data-index="1">
-                    <a href="javascript:void(0)">
-                        <img src="https://z11.tuanimg.com/imagev2/wxyy/110x110.a568816d3fc22f07cd5047bd2c07ae6e.png"
-                            alt="">
-                    </a>
-                    <p>签到红包</p>
+        <!-- 图片nav -->
+        <div class="imgnav">
+            <ul class="navul">
+                <li>
+                    <img :src="lists.navimg1" alt="">
                 </li>
-                <li class="texts" data-index="2">
-                    <a href="javascript:void(0)">
-                        <img src="https://z11.tuanimg.com/imagev2/wxyy/110x110.5cae34f688346b579a49f9b7e188c8cf.png"
-                            alt="">
-                    </a>
-                    <p>9.9包邮</p>
+                <li>
+                    <img :src="lists.navimg2" alt="">
                 </li>
-                <li class="texts" data-index="3">
-                    <a href="javascript:void(0)">
-                        <img src="https://z11.tuanimg.com/imagev2/wxyy/110x110.3455a7ea7a46db29cc03c8de352b5212.png"
-                            alt="">
-                    </a>
-                    <p>淘爆款</p>
+                <li>
+                    <img :src="lists.navimg3" alt="">
                 </li>
-                <li class="texts" data-index="4">
-                    <a href="javascript:void(0)">
-                        <img src="https://z11.tuanimg.com/imagev2/wxyy/110x110.811ccbf96e033e8a9142cf4d18ea465b.png"
-                            alt="">
-                    </a>
-                    <p>百元券</p>
+                <li>
+                    <img :src="lists.navimg4" alt="">
                 </li>
-                <li class="texts" data-index="5">
-                    <a href="javascript:void(0)">
-                        <img src="https://z11.tuanimg.com/imagev2/wxyy/110x110.495d9905ec8870fe2002002bcb3c8cb8.png"
-                            alt="">
-                    </a>
-                    <p>天天特价</p>
+                <li>
+                    <img :src="lists.navimg5" alt="">
+                </li>
+                <li>
+                    <img :src="lists.navimg6" alt="">
+                </li>
+                <li>
+                    <img :src="lists.navimg7" alt="">
+                </li>
+                <li>
+                    <img :src="lists.navimg8" alt="">
                 </li>
             </ul>
         </div>
-        <!-- config区域 -->
-        <div class="config">
-            <a href="javascript:void(0)"> <img
-                    src="https://z11.tuanimg.com/imagev2/wxyy/750x220.c379696b69ea1ead46d5ef9cac071440.jpg" alt=""></a>
-        </div>
-        <!-- 秒杀活动 -->
-        <div class="killactivity">
-            <div class="sekill">
-                <a href="javascript:void(0)"> <img
-                        src="https://z11.tuanimg.com/imagev2/wxyy/375x376.3d55842661d4007eaee88ffd2bc145ed.jpg" alt="">
-                </a>
-                <div class="killtime">
-                    <i class="hour">00</i>
-                    :
-                    <i class="minute">00</i>
-                    :
-                    <i class="second">00</i>
-                </div>
-            </div>
-            <div class="activity">
-                <div class="activity1">
-                    <a href="javascript:void(0)">
-                        <img src="https://z11.tuanimg.com/imagev2/wxyy/375x188.cbcb677bb44a5c8bca7efa64288fdfc6.jpg"
-                            alt="">
-                    </a>
-                </div>
-                <div class="activity2">
-                    <div class="activity21">
-                        <a href="javascript:void(0)">
-                            <img src="https://z11.tuanimg.com/imagev2/wxyy/187x188.b13c8f5940509e43941ff83a1522002c.jpg"
-                                alt="">
-                        </a>
-                    </div>
-                    <div class="activity22">
-                        <a href="javascript:void(0)">
-                            <img src="https://z11.tuanimg.com/imagev2/wxyy/187x188.dbf7630182ca77f48b62e5ab33eab6e6.jpg"
-                                alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- 商品内容 -->
-        <div class="goods-content" id="refreshContainer">
-            <div>
-                <ul class="goods">
-                </ul>
-            </div>
+        <div class="goods-content" id="refreshContainer" data-pullrefresh="1">
+            <ul class="goods">
+                <li class="goodsli" data-index="1">
+                    <a href="javascript:void(0)">
+                        <img :src="lists.goodsimg1" alt="">
+                        <div class="title" v-html="lists.goodstitle1">
+                        </div>
+                        <div class="price" v-html="lists.goodstext1">
+                        </div>
+                    </a>
+                </li>
+                <li class="goodsli" data-index="2">
+                    <a href="javascript:void(0)">
+                        <img :src="lists.goodsimg2" alt="">
+                        <div class="title" v-html="lists.goodstitle2">
+                        </div>
+                        <div class="price" v-html="lists.goodstext2">
+                        </div>
+                    </a>
+                </li>
+                <li class="goodsli" data-index="3">
+                    <a href="javascript:void(0)">
+                        <img :src="lists.goodsimg3" alt="">
+                        <div class="title" v-html="lists.goodstitle3">
+                        </div>
+                        <div class="price" v-html="lists.goodstext3">
+                        </div>
+                    </a>
+                </li>
+                <li class="goodsli" data-index="4">
+                    <a href="javascript:void(0)">
+                        <img :src="lists.goodsimg4" alt="">
+                        <div class="title" v-html="lists.goodstitle4">
+                        </div>
+                        <div class="price" v-html="lists.goodstext4">
+                        </div>
+                    </a>
+                </li>
+                <li class="goodsli" data-index="5">
+                    <a href="javascript:void(0)">
+                        <img :src="lists.goodsimg5" alt="">
+                        <div class="title" v-html="lists.goodstitle5">
+                        </div>
+                        <div class="price" v-html="lists.goodstext5">
+                        </div>
+                    </a>
+                </li>
+                <li class="goodsli" data-index="6">
+                    <a href="javascript:void(0)">
+                        <img :src="lists.goodsimg6" alt="">
+                        <div class="title" v-html="lists.goodstitle6">
+                        </div>
+                        <div class="price" v-html="lists.goodstext6">
+                        </div>
+                    </a>
+                </li>
+                <li class="goodsli" data-index="7">
+                    <a href="javascript:void(0)">
+                        <img :src="lists.goodsimg7" alt="">
+                        <div class="title" v-html="lists.goodstitle7">
+                        </div>
+                        <div class="price" v-html="lists.goodstext7">
+                        </div>
+                    </a>
+                </li>
+                <li class="goodsli" data-index="8">
+                    <a href="javascript:void(0)">
+                        <img :src="lists.goodsimg8" alt="">
+                        <div class="title" v-html="lists.goodstitle8">
+                        </div>
+                        <div class="price" v-html="lists.goodstext8">
+                        </div>
+                    </a>
+                </li>
+                <li class="goodsli" data-index="9">
+                    <a href="javascript:void(0)">
+                        <img :src="lists.goodsimg9" alt="">
+                        <div class="title" v-html="lists.goodstitle9">
+                        </div>
+                        <div class="price" v-html="lists.goodstext9">
+                        </div>
+                    </a>
+                </li>
+                <li class="goodsli" data-index="10">
+                    <a href="javascript:void(0)">
+                        <img :src="lists.goodsimg10" alt="">
+                        <div class="title" v-html="lists.goodstitle10">
+                        </div>
+                        <div class="price" v-html="lists.goodstext10">
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </div>
         <!-- 返回顶部 -->
         <div class="totop">
@@ -421,7 +456,7 @@
             </ul>
         </div>
     </div>
-    <script src="js/SpecialSale_index.js"></script>
+    <script src="./js/SpecialSale_classify.js"></script>
 </body>
 
 </html>

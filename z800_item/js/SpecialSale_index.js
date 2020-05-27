@@ -132,7 +132,6 @@ window.addEventListener('load', function () {
     })
     // 返回顶部
     var totop = document.querySelector('.totop');
-    var goods = document.querySelector('.goods');
     var killactivity = document.querySelector('.killactivity');
     totop.addEventListener('touchstart', function () {
         animate(window, 0);
@@ -158,5 +157,14 @@ window.addEventListener('load', function () {
             totop.style.display = 'none';
         }
     })
-
+    // 图片nav发送id
+    $('.texts').on('tap',function(){
+        var id=this.dataset['index'];
+        window.location.href='SpecialSale_ImgNav.html?id='+id;
+    })
+    // 最顶部导航发送id
+    $('.navbar').on('tap',function(){
+        var id=this.dataset['index'];
+        window.location.href='SpecialSale_classify.html?id='+id;
+    })
 })

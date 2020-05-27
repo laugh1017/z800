@@ -21,6 +21,15 @@ ul{
 img{
     display: block;
 }
+/* 下载app */
+.downloadGuide{
+    width: 100%;
+    padding-bottom: 10px;
+    background-color: #fff;
+}
+.downloadGuide img{
+    width: 100%;
+}
 /* 头部 */
 .header{
     width: 100%;
@@ -105,7 +114,6 @@ img{
 .nav .recommend span{
     width: 57%;
     color: #e30c26;
-    border-bottom: 2px solid #e30c26;
     font-size: .28rem;
     padding-bottom: 9.4%;
 }
@@ -200,109 +208,31 @@ img{
 .banner{
     width: 100%;
 }
-.swiper-container {
+.banner img{
     width: 100%;
 }
-.swiper-container img{
-    width: 100%;
-}
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-}
-.swiper-pagination-bullet-active{
-    opacity: 1;
-    background: #666!important;
-}
-/* 图片nav部分 */
-.nav-img{
+/* 图片nav */
+.imgnav{
     width: 100%;
     background-color: #fff;
 }
-.nav-img ul{
+.navul {
     width: 100%;
-    background-color: #fff;
     display: flex;
+    flex-wrap: wrap;
 }
-.nav-img ul li{
-    width: 20%;
+.navul li{
+    width: 25%;
     text-align: center;
-    padding: 3% 3% 0 3%;
 }
-.nav-img ul li p{
-    padding-top: 22%;
-    font-size: .2rem;
-    color: #666;
-}
-.nav-img ul li img{
+.navul li img{
     width: 100%;
-}
-/* config区域 */
-.config{
-    width: 100%;
-}
-.config img{
-    width: 100%;
-}
-/* 秒杀活动 */
-.killactivity{
-    width: 100%;
-    display: flex;
-    position: relative;
-    border-top: .8px solid rgba(204, 204, 204, 0.767);
-    border-bottom: .8px solid rgba(204, 204, 204, 0.582);
-}
-.killactivity img{
-    width: 100%;
-}
-.killactivity .sekill{
-    width: 50%;
-}
-.killactivity .sekill .killtime{
-    position: absolute;
-    top: 22%;
-    left: 3.5%;
-    color: #2b2b2b;
-    white-space: nowrap;
-    height: .4rem;
-    line-height: .4rem;
-    text-align: center;
-    font-size: .279rem;
-    
-}
-.killactivity .sekill .killtime i{
-    width: .4rem;
-    display: inline-block;
-    background-color: #333;
-    color: #fff;
-    vertical-align: middle;
-    font-style:normal;
-    border-radius: 5px;
-}
-.killactivity .activity{
-    width: 50%;
-}
-.killactivity .activity .activity1{
-    width: 100%;
-    border-bottom: .8px solid #ccc;
-    border-left: .8px solid #ccc;
-}
-.killactivity .activity .activity2{
-    width: 100%;
-    display: flex;
-}
-.killactivity .activity .activity2 .activity21{
-    width: 50%;
-    border-left: .8px solid #ccc;
-}
-.killactivity .activity .activity2 .activity22{
-    width: 50%;
-    border-left: .8px solid #ccc;
 }
 /* 商品内容 */
 .goods-content{
     width: 100%;
     background-color: #fff;
+    margin-bottom: 10%;
 }
 .goods-content .goods{
     width: 100%;
@@ -326,6 +256,9 @@ img{
     padding: 4% 0;
     font-weight: 400;
     color: #333;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .goods-content .goods li .price{
     font-size: .31rem;
