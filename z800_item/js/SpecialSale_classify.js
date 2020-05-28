@@ -1,4 +1,12 @@
 window.addEventListener('load', function () {
+    // 最顶部导航栏切换添加下边框
+    var num = window.location.search.split('=')[1]
+    var navbar = document.querySelector('.goodsnav').querySelectorAll('li');
+    for (var i = 0; i < 13; i++) {
+        if (num == i+1) {
+            navbar[i].setAttribute('class', 'border')
+        }
+    }
     // 接收后台数据渲染到页面
     new Vue({
         el: "#app",

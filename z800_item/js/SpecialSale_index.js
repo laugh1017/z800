@@ -67,8 +67,6 @@ window.addEventListener('load', function () {
             clearInterval(timer);
         }
     }, 1000)
-
-    
     // 获取主页列表数据
     var num = 1;
     var lists = []
